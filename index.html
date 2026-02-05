@@ -531,14 +531,14 @@
           categories.forEach((c) => c.classList.remove("active"));
           btn.classList.add("active");
 
-          // ОЧИЩАЕМ
+       
           videos.innerHTML = "";
 
-          // СОЗДАЁМ ОДНУ GRID-СЕКЦИЮ
+      
           videos.innerHTML = `<section class="video-section"></section>`;
           const section = document.querySelector(".video-section");
 
-          // ДОБАВЛЯЕМ МНОГО ВИДЕО ВНУТРЬ
+       
           for (let i = 1; i <= 6; i++) {
             section.innerHTML += `
         <article class="video-container">
@@ -566,11 +566,11 @@
       });
       const logo = document.querySelector(".youtube-logo");
 
-      // затемнение
+     
       const overlay = document.createElement("div");
       overlay.className = "overlay";
 
-      // боковое меню
+     
       const menu = document.createElement("div");
       menu.className = "side-menu";
       menu.innerHTML = `
@@ -586,13 +586,13 @@
       document.body.appendChild(menu);
       document.body.appendChild(overlay);
 
-      // открыть меню
+    
       logo.addEventListener("click", () => {
         menu.classList.add("show");
         overlay.classList.add("show");
       });
 
-      // закрыть по клику в пустоту
+      
       overlay.addEventListener("click", () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
